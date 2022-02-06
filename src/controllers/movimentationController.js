@@ -1,7 +1,7 @@
 import dayjs from "dayjs";
 import mywallet from "../myWalletDB.js";
 
-export default async function depositController(request, response){
+export default async function movimentationController(request, response){
 
     const userAndMovimentation = response.locals.user
 

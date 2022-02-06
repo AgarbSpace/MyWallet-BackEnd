@@ -1,7 +1,7 @@
 import { Router } from "express";
-import depositRoute from "./depositRoute.js";
 import getInfoRouter from "./getInfoRouter.js";
 import loginRouter from "./longinRouter.js";
+import movimentationRoute from "./movimentationRoute.js";
 import signUpRouter from "./signUpRouter.js";
 
 const router = Router()
@@ -9,6 +9,6 @@ const router = Router()
 router.use(getInfoRouter);
 router.use(loginRouter);
 router.use(signUpRouter);
-router.use(depositRoute);
+router.use(movimentationRoute);
 
 export default router;

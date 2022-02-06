@@ -1,9 +1,8 @@
-import depositAndRetreatSchema from "../schemas/depositAndRetreatSchema.js";
+import movimentationSchema from "../schemas/movimentationSchema.js";
 
-
-export default async function depositAndRetreatValidationMiddleware(request, response, next){
+export default async function movimentationValidationMiddleware(request, response, next){
     const movimentation = request.body;
-    const validation = depositAndRetreatSchema.validate(request.body, {abortEarly:false});
+    const validation = movimentationSchema.validate(request.body, {abortEarly:false});
 
     if(validation.error){
         response.sendStatus(422);
