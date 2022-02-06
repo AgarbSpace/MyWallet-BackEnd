@@ -5,6 +5,6 @@ import { validateToken } from "../middlewares/validateToken.js";
 
 const depositRoute = Router();
 
-depositRoute.post("/deposit", validateToken, depositAndRetreatValidationMiddleware, depositController);
+depositRoute.post("/movimentation", validateToken, depositAndRetreatValidationMiddleware, depositController);
 
 export default depositRoute;
