@@ -16,6 +16,7 @@ export default async function depositController(request, response){
         response.sendStatus(200);
         
     }catch (error){
+        
         console.log(error);
         response.sendStatus(500);
     }
