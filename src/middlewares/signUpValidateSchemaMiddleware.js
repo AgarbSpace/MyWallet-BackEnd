@@ -8,7 +8,8 @@ export default async function signUpValidateSchemaMiddleware (request, response,
         const validation = signUpFormSchema.validate(user, {abortEarly:false});
         
         if(validation.error){
-            response.sendStatus(422);
+            const error = validation.error.details.map(error => error.message)
+            response.status(422).send(error);
             return;
         }
     
